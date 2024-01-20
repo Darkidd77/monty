@@ -23,7 +23,7 @@
 typedef struct inst_s
 {
 	char *ocode;
-	void (*fun1)(stacknode_t **stack, unsigned int line_num);
+	void (*fun1)(stack_t **stack, unsigned int line_num);
 } inst_t;
 
 extern stacknode_t *head;

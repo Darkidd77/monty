@@ -79,5 +79,4 @@ void push_que(stack_t **, unsigned int);
 
 void call_func1(op_func, char *, char *, int, int);
 
-
 #endif

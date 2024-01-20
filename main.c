@@ -82,9 +82,9 @@ stacknode_t *create_node(int n)
 
 	node = malloc(sizeof(stacknode_t));
 	if (node == NULL)
-		err(4);
+		error(4);
 	node->next = NULL;
 	node->prev = NULL;
-	node->n = n;
+	node->x = x;
 	return (node);
 }

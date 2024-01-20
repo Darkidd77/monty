@@ -11,26 +11,6 @@
 #include <unistd.h>
 
 
-
-/**
- * struct inst_s - opcode & function
- * @ocode: the opcode
- * @fun1: function to handle the opcode
- *
- * Description: opcode and its function
- * for stack, queues, LIFO, FIFO
- */
-typedef struct inst_s
-{
-	char *ocode;
-	void (*fun1)(stack_t **stack, unsigned int line_num);
-} inst_t;
-
-extern stacknode_t *head;
-typedef void (*op_func)(stacknode_t **, unsigned int);
-
-
-
 /**
  * struct stacknode_s - doubly linked list of a stack or queue
  * @x: integer
@@ -46,6 +26,26 @@ typedef struct stacknode_s
 	struct stacknode_s *prev;
 	struct stacknode_s *next;
 } stacknode_t;
+
+/**
+ * struct inst_s - opcode & function
+ * @ocode: the opcode
+ * @fun1: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
+ */
+typedef struct inst_s
+{
+	char *ocode;
+	void (*fun1)(stacknode_t **stack, unsigned int line_num);
+} inst_t;
+
+extern stacknode_t *head;
+typedef void (*op_func)(stacknode_t **, unsigned int);
+
+
+
 
 
 

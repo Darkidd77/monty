@@ -1,4 +1,5 @@
 #include "monty.h"
+
 stacknode_t *head = NULL;
 
 

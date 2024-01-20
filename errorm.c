@@ -41,7 +41,7 @@ void error(int ecode, ...)
 			break;
 	}
 
-	freestacknodes();
+	free_n();
 	exit(EXIT_FAILURE);
 }
 
@@ -79,7 +79,7 @@ void extra_err(int ecode, ...)
 			break;
 	}
 
-	freestacknodes();
+	free_n();
 	exit(EXIT_FAILURE);
 }
 
@@ -96,7 +96,7 @@ void str_err(int ecode, ...)
 
 	va_start(args, ecode);
 
-	int line_num = va_arg(args, int);
+	int line_n = va_arg(args, int);
 
 	switch (ecode)
 	{
@@ -110,6 +110,6 @@ void str_err(int ecode, ...)
 			break;
 	}
 
-	freestacknodes();
+	free_n();
 	exit(EXIT_FAILURE);
 }

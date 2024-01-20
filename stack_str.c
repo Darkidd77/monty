@@ -64,7 +64,7 @@ void pchar(stacknode_t **stack, unsigned int line_num)
 	if (stack == NULL || *stack == NULL)
 		str_err(11, line_num);
 
-	ascii = (*stack)->n;
+	ascii = (*stack)->x;
 	if (ascii < 0 || ascii > 127)
 		str_err(10, line_num);
 	printf("%c\n", ascii);
@@ -89,7 +89,7 @@ void pstr(stacknode_t **stack, __attribute__((unused))unsigned int ln)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		ascii = tmp->n;
+		ascii = tmp->x;
 		if (ascii <= 0 || ascii > 127)
 			break;
 		printf("%c", ascii);

@@ -33,7 +33,6 @@ int parse_mline(char *buf, int line_num, int form)
 	return (form);
 }
 
-void execute_op(op_func operation, char *opcod
 
 /**
  * find_fun1 - find the appropriate function for the opcode

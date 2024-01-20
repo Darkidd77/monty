@@ -74,9 +74,9 @@ void find_fun1(char *, char *, int, int);
 
 stacknode_t *create_node(int n);
 void free_n(void);
-void print_s(stack_t **, unsigned int);
-void push_stack(stack_t **, unsigned int);
-void push_que(stack_t **, unsigned int);
+void print_s(stacknode_t **, unsigned int);
+void push_stack(stacknode_t **, unsigned int);
+void push_que(stacknode_t **, unsigned int);
 
 void call_func1(op_func, char *, char *, int, int);
 

@@ -3,44 +3,44 @@
 
 
 /**
- * mod_nodes - Adds the top two elements of the stack.
+ * mod_n - Adds the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @line_num: Interger representing the line number of of the opcode.
  */
-void mod_nodes(stack_t **stack, unsigned int line_number)
+void mod_n(stacknode_t **stack, unsigned int line_num)
 {
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 
-		more_err(8, line_number, "mod");
+		extra_err(8, line_num, "mod");
 
 
-	if ((*stack)->n == 0)
-		more_err(9, line_number);
+	if ((*stack)->x == 0)
+		extra_err(9, line_num);
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n % (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->x % (*stack)->prev->x;
+	(*stack)->x = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
 
 
 /**
- * mul_nodes - Adds the top two elements of the stack.
+ * mul_n - Adds the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @line_num: Interger representing the line number of of the opcode.
  */
-void mul_nodes(stack_t **stack, unsigned int line_number)
+void mul_n(stacknode_t **stack, unsigned int line_num)
 {
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, line_number, "mul");
+		extra_err(8, line_num, "mul");
 
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n * (*stack)->prev->n;
-	(*stack)->n = sum;
+	sum = (*stack)->x * (*stack)->prev->x;
+	(*stack)->x = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }

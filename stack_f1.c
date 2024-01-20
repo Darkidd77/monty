@@ -6,7 +6,7 @@
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_num: line number of  the opcode.
  */
-void print_s(stack_t **stack, unsigned int line_num)
+void print_s(stacknode_t **stack, unsigned int line_num)
 {
 	stacknode_t *tmp;
 
@@ -49,7 +49,7 @@ void print_up(stacknode_t **stack, unsigned int line_num)
 {
 	if (stack == NULL || *stack == NULL)
 		extra_err(6, line_num);
-	printf("%d\n", (*stack)->n);
+	printf("%d\n", (*stack)->x);
 }
 
 /**
@@ -57,7 +57,7 @@ void print_up(stacknode_t **stack, unsigned int line_num)
  * @new_n: Pointer to the new node.
  * @ln: Interger representing the line number of of the opcode.
  */
-void push_stack(stack_t **new_n, __attribute__((unused))unsigned int ln)
+void push_stack(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
 {
 	stacknode_t *tmp;
 

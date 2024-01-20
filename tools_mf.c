@@ -65,11 +65,11 @@ void find_fun1(char *ocode, char *value, int ln, int form)
 	if (ocode[0] == '#')
 		return;
 
-	for (flag = 1, i = 0; func_list[i].opcode != NULL; i++)
+	for (flag = 1, i = 0; func_list[i].ocode != NULL; i++)
 	{
 		if (strcmp(ocode, func_list[i].ocode) == 0)
 		{
-			call_func1(func_list[i].f, ocode, value, ln, form);
+			call_func1(func_list[i].fun1, ocode, value, ln, form);
 			flag = 0;
 		}
 	}
@@ -109,7 +109,7 @@ void read_mfile(FILE *file)
 
 	for (line_num = 1; getline(&buf, &len, file) != -1; line_num++)
 	{
-		format = parse_mline(buf, line_num, form);
+		form = parse_mline(buf, line_num, form);
 	}
 
 	free(buf);

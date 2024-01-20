@@ -51,11 +51,11 @@ typedef void (*op_func)(stacknode_t **, unsigned int);
 
 void print_up(stacknode_t **, unsigned int);
 void pop_up(stacknode_t **, unsigned int);
-void nop(stacknode_t **, unsigned int);
+void no_op(stacknode_t **, unsigned int);
 void swap_n(stacknode_t **, unsigned int);
 
 void pchar(stacknode_t **, unsigned int);
-void print_str(stacknode_t **, unsigned int);
+void pstr(stacknode_t **, unsigned int);
 void rotm(stacknode_t **, unsigned int);
 
 void error(int ecode, ...);

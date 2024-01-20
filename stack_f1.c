@@ -16,7 +16,7 @@ void print_s(stacknode_t **stack, unsigned int line_num)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		printf("%d\n", tmp->n);
+		printf("%d\n", tmp->x);
 		tmp = tmp->next;
 	}
 }
@@ -69,7 +69,7 @@ void push_stack(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
 		return;
 	}
 	tmp = head;
-	head = *new_node;
+	head = *new_n;
 	head->next = tmp;
 	tmp->prev = head;
 }

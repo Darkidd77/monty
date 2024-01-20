@@ -93,18 +93,18 @@ void extra_err(int ecode, ...)
 void str_err(int ecode, ...)
 {
 	va_list args;
+	int line_n;
 
 	va_start(args, ecode);
-
-	int line_n = va_arg(args, int);
+	line_n = va_arg(args, int);
 
 	switch (ecode)
 	{
 		case 10:
-			fprintf(stderr, "L%d: can't pchar, value out of range\n", line_num);
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", line_n);
 			break;
 		case 11:
-			fprintf(stderr, "L%d: can't pchar, stack empty\n", line_num);
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", line_n);
 			break;
 		default:
 			break;

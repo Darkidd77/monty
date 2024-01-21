@@ -78,6 +78,15 @@ void print_s(stacknode_t **, unsigned int);
 void push_stack(stacknode_t **, unsigned int);
 void push_que(stacknode_t **, unsigned int);
 
+
+void add_n(stacknode_t **, unsigned int);
+void sub_n(stacknode_t **, unsigned int);
+void div_n(stacknode_t **, unsigned int);
+void mul_n(stacknode_t **, unsigned int);
+void mod_n(stacknode_t **, unsigned int);
+
+
+
 void call_func1(op_func, char *, char *, int, int);
 
 #endif

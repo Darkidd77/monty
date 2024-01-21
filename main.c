@@ -1,7 +1,5 @@
 #include "monty.h"
-
-stacknode_t *head = NULL;
-
+static stacknode_t *head;
 
 
 /**
@@ -50,7 +48,7 @@ void free_n(void)
  * @new_n: Pointer to the new node.
  * @ln: line number of the opcode.
  */
-void push_queue(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
+void push_que(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
 {
 	stacknode_t *tmp;
 

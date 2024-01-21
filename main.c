@@ -1,5 +1,8 @@
 #include "monty.h"
-static stacknode_t *head;
+
+stacknode_t *head = NULL;
+
+
 
 
 /**
@@ -72,10 +75,10 @@ void push_que(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
 
 /**
  * create_node - Creates a node.
- * @n: Number to go inside the node.
+ * @x: Number to go inside the node.
  * Return: Upon sucess a pointer to the node. Otherwise NULL.
  */
-stacknode_t *create_node(int n)
+stacknode_t *create_node(int x)
 {
 	stacknode_t *node;
 

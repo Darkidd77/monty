@@ -1,5 +1,5 @@
 #include "monty.h"
-i
+
 
 /**
  * sub_n - Adds the top two elements of the stack.

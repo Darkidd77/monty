@@ -59,6 +59,11 @@ void find_fun1(char *ocode, char *value, int ln, int form)
 		{"pstr", pstr},
 		{"rotl", rotm},
 		{"rotr", rote},
+		{"add", add_n},
+		{"sub", sub_n},
+		{"div", div_n},
+		{"mul", mul_n},
+		{"mod", mod_n},
 		{NULL, NULL}
 	};
 

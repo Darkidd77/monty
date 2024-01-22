@@ -83,9 +83,9 @@ void no_op(stacknode_t **stack, unsigned int line_num)
 
 
 /**
- * add_nodes - Adds the top two elements of the stack.
+ * add_n - Adds the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @line_num: Interger representing the line number of of the opcode.
  */
 void add_n(stacknode_t **stack, unsigned int line_num)
 {

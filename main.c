@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
  */
 void free_n(void)
 {
-	stacknode_t *head;
+	stacknode_t *head = NULL;
 	stacknode_t *tmp;
 
 	if (head == NULL)
@@ -53,7 +53,7 @@ void free_n(void)
  */
 void push_que(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
 {
-	stacknode_t *head;
+	stacknode_t *head = NULL;
 	stacknode_t *tmp;
 
 	if (new_n == NULL || *new_n == NULL)

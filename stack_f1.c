@@ -59,6 +59,7 @@ void print_up(stacknode_t **stack, unsigned int line_num)
  */
 void push_stack(stacknode_t **new_n, __attribute__((unused))unsigned int ln)
 {
+	stacknode_t *head = NULL;
 	stacknode_t *tmp;
 
 	if (new_n == NULL || *new_n == NULL)

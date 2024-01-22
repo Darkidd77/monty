@@ -131,6 +131,7 @@ void read_mfile(FILE *file)
  */
 void call_func1(op_func func, char *op, char *val, int ln, int form)
 {
+	stacknode_t *head = NULL;
 	stacknode_t *node;
 	int flag;
 	int i;
